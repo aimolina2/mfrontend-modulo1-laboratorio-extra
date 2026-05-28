@@ -4,7 +4,126 @@
   box-sizing: border-box;
 }
 
+$color-base: #cef17b;
+$color-secondary: #084734;
+$color-accent: #cdedb3;
+$color-background: #f0f0f0;
+$color-detail: #ccc;
+
 body {
-  background-color: rgb(227, 228, 249);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: $color-background;
+  font-family: roboto, sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    background-color: #ffffff;
+    border: 1px solid $color-detail;
+    padding: 8px;
+    border-radius: 4px;
+    min-width: 300px;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .page-title {
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    background: $color-base;
+    color: $color-secondary;
+    padding: 25px 20px;
+    width: 100%;
+  }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  min-width: 250px;
+  background-color: $color-secondary;
+
+  .menu-title {
+    color: $color-accent;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: $color-accent;
+
+    li {
+      border-bottom: 2px solid $color-detail;
+      padding: 10px;
+      color: $color-secondary;
+    }
+
+    li:hover {
+      background-color: $color-base;
+      cursor: pointer;
+    }
+  }
+}
+
+main {
+  padding: 50px;
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 4px 3px 7px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: $color-detail;
+  width: 250px;
+
+  &:hover {
+    box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: $color-secondary;
+    img {
+      border: 3px solid $color-accent;
+      box-shadow: 6px 5px 10px rgba(192, 248, 152, 0.2);
+    }
+  }
+
+  img {
+    border-radius: 100px;
+    margin-bottom: 15px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+footer {
+  background-color: $color-accent;
+  padding: 25px;
+  color: $color-secondary;
 }
