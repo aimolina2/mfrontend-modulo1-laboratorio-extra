@@ -37,6 +37,7 @@ header {
     align-items: center;
     padding: 10px 20px;
   }
+
   .page-title {
     display: flex;
     font-size: 24px;
@@ -148,6 +149,7 @@ footer {
       background-color: $color-secondary;
       gap: 5px;
       text-align: center;
+
       li {
         width: 100%;
         background-color: $color-accent;
@@ -164,6 +166,7 @@ footer {
   .page-container {
     flex-direction: column;
   }
+
   header .toolbar {
     display: none;
   }
@@ -172,6 +175,7 @@ footer {
     flex-direction: column;
     gap: 5px;
   }
+
   .card {
     width: 100%;
     display: flex;
